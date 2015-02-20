@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-feb-2015 17:27:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Almacen.UbicacionProductos" table="ubicacion_productos" catalog="practica">
+        <composite-id name="id" class="Almacen.UbicacionProductosId">
+            <key-property name="idUbicacion" type="int">
+                <column name="ID_UBICACION" />
+            </key-property>
+            <key-property name="ean" type="int">
+                <column name="EAN" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

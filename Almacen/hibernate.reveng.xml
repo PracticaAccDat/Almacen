@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<type-mapping>
+		<sql-type jdbc-type="VARCHAR" hibernate-type="string"></sql-type>
+		<sql-type jdbc-type="INTEGER" hibernate-type="int"
+			not-null="true">
+		</sql-type>
+		<sql-type jdbc-type="VARCHAR" hibernate-type="string"
+			length="25" not-null="true">
+		</sql-type>
+		<sql-type jdbc-type="VARCHAR" hibernate-type="string"
+			length="250" not-null="true">
+		</sql-type>
+		<sql-type jdbc-type="INTEGER" hibernate-type="int"
+			not-null="true">
+		</sql-type>
+		<sql-type jdbc-type="VARCHAR" hibernate-type="string"
+			length="250" not-null="true">
+		</sql-type>
+	</type-mapping>
+	<table-filter match-schema="almacen" match-name=".*" />
+	<table-filter match-catalog="almacen" match-name="clientes" />
+	<table-filter match-catalog="almacen" match-name="empleados" />
+	<table-filter match-catalog="almacen" match-name="pedidos" />
+	<table-filter match-catalog="almacen" match-name="producto" />
+	<table-filter match-catalog="almacen" match-name="proveedores" />
+	<table-filter match-name=".*"></table-filter>
+	<table-filter match-schema="almacen" match-name=".*"></table-filter>
+	<table catalog="almacen" name="producto">
+		<column name="ean"></column>
+		<column name="asin"></column>
+		<column name="fabricante"></column>
+		<column name="modelo"></column>
+		<column name="descripcion"></column>
+		<column name="precio"></column>
+		<column name="alto"></column>
+		<column name="ancho"></column>
+		<column name="largo"></column>
+		<column name="peso"></column>
+	</table>
+	<table catalog="almacen" name="pedidos">
+		<column name="idpedido"></column>
+		<column name="idcliente"></column>
+		<column name="fecha"></column>
+	</table>
+	<table catalog="almacen" name="proveedores">
+		<column name="idproveedor"></column>
+		<column name="CIF"></column>
+		<column name="nombre"></column>
+		<column name="descripcion"></column>
+		<column name="direccion"></column>
+		<column name="telefono"></column>
+	</table>
+	<table catalog="almacen" name="empleados">
+		<column name="nombre"></column>
+		<column name="Apellidos"></column>
+		<column name="id"></column>
+		<column name="direccion"></column>
+		<column name="telefono"></column>
+		<column name="dni"></column>
+	</table>
+	<table catalog="almacen" name="clientes">
+		<column name="id"></column>
+		<column name="nombre"></column>
+		<column name="apellidos"></column>
+		<column name="telefono"></column>
+		<column name="direccion"></column>
+	</table>
+</hibernate-reverse-engineering>

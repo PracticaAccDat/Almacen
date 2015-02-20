@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-feb-2015 17:27:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Almacen.Productos" table="productos" catalog="practica">
+        <id name="ean" type="int">
+            <column name="EAN" />
+            <generator class="assigned" />
+        </id>
+        <property name="asi" type="int">
+            <column name="ASI" not-null="true" unique="true" />
+        </property>
+        <property name="fabricante" type="string">
+            <column name="FABRICANTE" length="50" not-null="true" />
+        </property>
+        <property name="modelo" type="string">
+            <column name="MODELO" length="50" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="DESCRIPCION" length="50" not-null="true" />
+        </property>
+        <property name="precio" type="double">
+            <column name="PRECIO" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="alto" type="double">
+            <column name="ALTO" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="ancho" type="double">
+            <column name="ANCHO" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="largo" type="double">
+            <column name="LARGO" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="peso" type="double">
+            <column name="PESO" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

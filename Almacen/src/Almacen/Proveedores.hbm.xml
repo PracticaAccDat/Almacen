@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-feb-2015 17:27:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Almacen.Proveedores" table="proveedores" catalog="practica">
+        <id name="idProveedor" type="java.lang.Integer">
+            <column name="ID_PROVEEDOR" />
+            <generator class="identity" />
+        </id>
+        <property name="cif" type="string">
+            <column name="CIF" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="40" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="DESCRIPCION" length="50" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="DIRECCION" length="40" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="TELEFONO" length="9" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
