@@ -2,7 +2,7 @@
 
 
 
-package Almacen;
+package Java;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -19,12 +19,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import Almacen.Empleados;
+
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Usuarios extends JFrame {
+public class Alta extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textNombre;
@@ -32,7 +34,6 @@ public class Usuarios extends JFrame {
 	private JTextField textDireccion;
 	private JTextField textTelefono;
 	private JButton btnNuevoUsuario;
-	private JButton btnModificarUsuario;
 	private JButton btnAtrs;
 	private JLabel lblDni;
 	private JTextField textDni;
@@ -46,7 +47,7 @@ public class Usuarios extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Usuarios frame = new Usuarios();
+					Alta frame = new Alta();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,9 +59,9 @@ public class Usuarios extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Usuarios() {
+	public Alta() {
 		setResizable(false);
-		setTitle("USUARIOS");
+		setTitle("ALTA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 451, 249);
 		contentPane = new JPanel();
@@ -109,7 +110,7 @@ public class Usuarios extends JFrame {
 		contentPane.add(textTelefono);
 		textTelefono.setColumns(10);
 		
-		btnNuevoUsuario = new JButton("NUEVO USUARIO");
+		btnNuevoUsuario = new JButton("ALTA");
 		btnNuevoUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -140,46 +141,13 @@ public class Usuarios extends JFrame {
 				}
 			}
 		});
-		btnNuevoUsuario.setBounds(44, 152, 172, 23);
+		btnNuevoUsuario.setBounds(137, 152, 165, 23);
 		contentPane.add(btnNuevoUsuario);
-		
-		btnModificarUsuario = new JButton("MODIFICAR USUARIO");
-		btnModificarUsuario.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {	
-					Empleados empleado = new Empleados(textNombre.getText(),textApellidos.getText(),textDireccion.getText(),textTelefono.getText(),textDni.getText());
-					int reply =JOptionPane.showConfirmDialog(null, "Confirme si quiere insertar.","",JOptionPane.YES_NO_OPTION);
-					if (reply == JOptionPane.YES_OPTION){
-						helper.actualizar(empleado);
-						textNombre.setText("");
-						textApellidos.setText("");
-						textDireccion.setText("");
-						textTelefono.setText("");
-						textDni.setText("");
-					}else{
-						textNombre.setText("");
-						textApellidos.setText("");
-						textDireccion.setText("");
-						textTelefono.setText("");
-						textDni.setText("");
-					}
-				} catch (Exception ex) {
-					JOptionPane.showMessageDialog(null, "El usuario introducido no existe.", "ERROR AL MODIFICAR", JOptionPane.ERROR_MESSAGE);
-					textNombre.setText("");
-					textApellidos.setText("");
-					textDireccion.setText("");
-					textTelefono.setText("");
-					textDni.setText("");
-				}				
-			}
-		});
-		btnModificarUsuario.setBounds(226, 152, 165, 23);
-		contentPane.add(btnModificarUsuario);
 		
 		btnAtrs = new JButton("ATR\u00C1S");
 		btnAtrs.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Principal principal = new Principal();
+				Menu principal = new Menu();
 				principal.setVisible(true);
 				dispose();
 			}

@@ -1,4 +1,4 @@
-package Almacen;
+package Java;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

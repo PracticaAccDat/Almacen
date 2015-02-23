@@ -1,4 +1,4 @@
-package Almacen;
+package Java;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
-public class Principal extends JFrame {
+public class Menu extends JFrame {
 
 	private JPanel contentPane;
 	 
@@ -22,7 +22,7 @@ public class Principal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Principal frame = new Principal();
+					Menu frame = new Menu();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -34,7 +34,7 @@ public class Principal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Principal() {
+	public Menu() {
 		setTitle("INICIO");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,7 +48,7 @@ public class Principal extends JFrame {
 		JButton btnUsuarios = new JButton("USUARIOS");
 		btnUsuarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Usuarios usuarios = new Usuarios();
+				Alta usuarios = new Alta();
 				usuarios.setVisible(true);
 				dispose();
 			}
