@@ -73,5 +73,9 @@ public class DescargaCamion extends JFrame {
 		        modelo.addElement(i);
 		}
 		list.setModel(modelo);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(387, 226, 89, 23);
+		contentPane.add(btnNewButton);
 	}
 }
