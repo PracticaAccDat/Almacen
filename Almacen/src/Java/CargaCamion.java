@@ -60,6 +60,10 @@ public class CargaCamion extends JFrame {
 		JTextArea textArea = new JTextArea();
 		scrollPane.setViewportView(textArea);
 		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(298, 274, 117, 25);
+		contentPane.add(btnNewButton);
+		
 		
 	}
 }
