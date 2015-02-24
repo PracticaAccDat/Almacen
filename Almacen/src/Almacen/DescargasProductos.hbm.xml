@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 17-feb-2015 17:27:05 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 24-feb-2015 16:55:43 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="Almacen.DescargasProductos" table="descargas_productos" catalog="practica">
         <composite-id name="id" class="Almacen.DescargasProductosId">

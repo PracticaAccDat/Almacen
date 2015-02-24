@@ -18,7 +18,7 @@ public class Menu extends JFrame {
 	String nombre;
 	String DNI;
 
-	public Menu(String nombre, String DNI) {
+	public Menu(final String nombre, final String DNI) {
 		this.nombre = nombre;
 		this.DNI = DNI;
 		setTitle("MENU");
@@ -34,13 +34,20 @@ public class Menu extends JFrame {
 		JButton btnDecargar = new JButton("CARGAR CAMI\u00D3N");
 		btnDecargar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				
 			}
 		});
 		btnDecargar.setBounds(80, 40, 183, 23);
 		contentPane.add(btnDecargar);
 
 		JButton btnCargar = new JButton("DESCARGAR CAMI\u00D3N");
+		btnCargar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				DescargaCamion descarga = new DescargaCamion(nombre, DNI);
+				descarga.setVisible(true);
+				dispose();
+			}
+		});
 		btnCargar.setBounds(80, 82, 183, 23);
 		contentPane.add(btnCargar);
 
