@@ -40,25 +40,7 @@ public class Alta extends JFrame {
 	private HibernateHelper helper = new HibernateHelper();
 	
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Alta frame = new Alta();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
-	/**
-	 * Create the frame.
-	 */
 	public Alta() {
 		setResizable(false);
 		setTitle("ALTA");
@@ -147,8 +129,8 @@ public class Alta extends JFrame {
 		btnAtrs = new JButton("ATR\u00C1S");
 		btnAtrs.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Menu principal = new Menu();
-				principal.setVisible(true);
+				Login login = new Login();
+				login.setVisible(true);
 				dispose();
 			}
 		});

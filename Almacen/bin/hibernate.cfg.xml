@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">prueba</property>
+        <property name="hibernate.connection.pool_size">1</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/practica</property>
+        <property name="hibernate.connection.username">prueba</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.show_sql">false</property>
+        <mapping resource="Almacen/Descargas.hbm.xml" />
+        <mapping resource="Almacen/ProductosPedidos.hbm.xml" />
+        <mapping resource="Almacen/Ubicacion.hbm.xml" />
+        <mapping resource="Almacen/Empleados.hbm.xml" />
+        <mapping resource="Almacen/Proveedores.hbm.xml" />
+        <mapping resource="Almacen/Productos.hbm.xml" />
+        <mapping resource="Almacen/Pedido.hbm.xml" />
+        <mapping resource="Almacen/Cargas.hbm.xml" />
+        <mapping resource="Almacen/DescargasProductos.hbm.xml" />
+        <mapping resource="Almacen/UbicacionProductos.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>
